@@ -23,27 +23,30 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!--Background pattern-->
+    <link href="css/jupiter-pattern.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-secondary jupiter-pattern">
     <!-- Topbar Start -->
-    <div class="w-50 mx-auto" style="border: 1px solid #ccc; box-shadow: 1px .2px .2px 2px #ccc; padding: 4rem 6rem; border-radius: 20px;margin-top: 10rem;">
-        <h4 style="text-align: center; margin-bottom: 4rem">Want to sell your product</h4>
+    <div class="w-50 mx-auto bg-white" style="border: 1px solid #ccc; box-shadow: 1px .2px .2px 2px #ececec; padding: 4rem 6rem; border-radius: 20px;margin-top: 2rem;">
+        <h4 style="text-align: center; margin-bottom: 2rem">Want to sell your product</h4>
         <form>
             <div style="display: flex;">
-                <label for="upload-image" class="m-auto"><img src="img/profile-image.png" style="width: 8rem; height: auto; text-align: center; cursor: pointer; margin-bottom: 3rem"></label>
+                <label for="upload-image" class="m-auto shadow" style="width: max-content; border-radius: 50%;"><img src="img/profile-image.png" style="width: 15rem; height: auto; text-align: center; cursor: pointer;"></label>
                 <input type="file" name="upload-image" accept="image/png, image/gif, image/jpeg" id="upload-image" style="display: none">
             </div>
 
             <div style="display: flex; flex-direction: column; margin-bottom: 1rem;">
                 <label for="product-name">Product name</label>
-                <input type="text" name="product-name" id="product-name">
+                <input type="text" name="product-name" id="product-name" class="p-2 rounded-lg px-3" style="outline: none; border: 1px solid #aaa">
             </div>
 
             <div style="display: flex; flex-direction: column; margin-bottom: 1rem;">
                 <!-- PRICE -->
                 <label for="product-price">Price</label>
-                <input type="number" name="product-price" id="product-price">
+                <input type="number" name="product-price" id="product-price" class="p-2 rounded-lg px-3" style="outline: none; border: 1px solid #aaa">
             </div>
 
             <div style="display: flex; flex-direction: column; margin-bottom: 1rem;">
@@ -51,19 +54,19 @@
                 <label for="">Size</label>
                 <div style="display: flex; justify-content: space-between; align-items: center">
                     <span style="display: flex; align-items: center">
-                        <input type="checkbox" name="XS" id="" style="margin-right: 1rem;">XS
+                        <input type="radio" id="XS" name="size" style="margin-right: 1rem;">XS
                     </span>
                     <span style="display: flex; align-items: center">
-                        <input type="checkbox" name="S" id="" style="margin-right: 1rem;">S
+                        <input type="radio" id="S" name="size" style="margin-right: 1rem;">S
                     </span>
                     <span style="display: flex; align-items: center">
-                        <input type="checkbox" name="M" id="" style="margin-right: 1rem;">M
+                        <input type="radio" id="M" name="size" style="margin-right: 1rem;">M
                     </span>
                     <span style="display: flex; align-items: center">
-                        <input type="checkbox" name="L" id="" style="margin-right: 1rem;">L
+                        <input type="radio" id="L" name="size" style="margin-right: 1rem;">L
                     </span>
                     <span style="display: flex; align-items: center">
-                        <input type="checkbox" name="XL" id="" style="margin-right: 1rem;">XL
+                        <input type="radio" id="XL" name="size" style="margin-right: 1rem;">XL
                     </span>
                 </div>
 
@@ -71,13 +74,13 @@
 
             <div style="display: flex; flex-direction: column; margin-bottom: 1rem;">
                 <label for="available-product">Number available</label>
-                <input type="number" name="available-product" id="available-product">
+                <input type="number" name="available-product" id="available-product" class="p-2 rounded-lg px-3" style="outline: none; border: 1px solid #aaa">
             </div>
 
             <div style="display: flex; flex-direction: column; margin-bottom: 1rem;">
                 <!-- COLOR -->
                 <label for="product-color">Color</label>
-                <select name="product-color" id="product-color">
+                <select name="product-color" id="product-color" class="p-2 rounded-lg px-3" style="outline: none; border: 1px solid #aaa">
                     <option value="red">red</option>
                     <option value="blue">blue</option>
                     <option value="green">green</option>
@@ -89,22 +92,22 @@
             <div style="display: flex; flex-direction: column; margin-bottom: 1rem;">
                 <!-- Weight -->
                 <label for="product-weight">Weight</label>
-                <input type="number" name="product-weight" id="product-weight">
+                <input type="number" name="product-weight" id="product-weight" class="p-2 rounded-lg px-3" style="outline: none; border: 1px solid #aaa">
             </div>
             <div style="display: flex; flex-direction: column; margin-bottom: 1rem;">
                 <!-- Dimensions -->
                 <label for="product-dimensions">Dimensions</label>
                 <div style="display: flex">
-                    <div style="display: flex">
-                        <input type="number" name="product-dimensions" id="product-dimensions" style="margin-right: .5rem; width: 4rem"> x
+                    <div style="display: flex; width: 100%; margin-right: .8rem; align-items: center">
+                        <input type="number" name="product-dimensions" id="product-dimensions" style="margin-right: .5rem; width: 4rem; width: 100%; outline: none; border: 1px solid #aaa" class="p-2 rounded-lg px-3"> x
                     </div>
-                    <div style="display: flex">
+                    <div style="display: flex; width: 100%; margin-right: .8rem; align-items: center">
                         <input type="number" name="product-dimensions" id="product-dimensions" style="margin-right: .5rem; 
-                        margin-left: .5rem;width: 4rem"> x
+                        width: 4rem; width: 100%; outline: none; border: 1px solid #aaa" class="p-2 rounded-lg px-3"> x
                     </div>
-                    <div style="display: flex">
+                    <div style="display: flex; width: 100%; align-items: center">
                         <input type="number" name="product-dimensions" id="product-dimensions" style="margin-right: .5rem; 
-                        margin-left: .5rem;width: 4rem">
+                        width: 4rem; width: 100%; outline: none; border: 1px solid #aaa" class="p-2 rounded-lg px-3">
                     </div>
                 </div>
             </div>
@@ -112,27 +115,27 @@
             <div style="display: flex; flex-direction: column; margin-bottom: 1rem;">
                 <!-- Product Materials -->
                 <label for="product-materials">Materials</label>
-                <input type="text" name="product-materials" id="product-materials">
+                <input type="text" name="product-materials" id="product-materials" class="p-2 rounded-lg px-3" style="outline: none; border: 1px solid #aaa">
             </div>
 
-            <textarea placeholder="Description" id="description" style="width: 100%;" rows="10"></textarea>
+            <textarea placeholder="Description" id="description" style="width: 100%;outline: none; border: 1px solid #aaa; resize: none  " rows="10" class="p-2 rounded-lg px-3"></textarea>
 
-            <button class="btn btn-primary" style="display: flex; margin: auto; padding: .5rem 2rem">Save</button>
+            <button class="btn btn-primary" style="display: flex; margin: auto; padding: .5rem 2rem; margin-top: 1rem">Save</button>
         </form>
 
 
-        <!-- JavaScript Libraries
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js "></script>
-    <script src="lib/easing/easing.min.js "></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js "></script>
+        JavaScript Libraries
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js "></script>
+        <script src="lib/easing/easing.min.js "></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js "></script>
 
-    <!-- Contact Javascript File -->
+        <!-- Contact Javascript File -->
         <!-- <script src="mail/jqBootstrapValidation.min.js "></script>
     <script src="mail/contact.js "></script> -->
 
         <!-- Template Javascript -->
-        <!-- <script src="js/main.js "></script> -->
+        <!-- <script src="js/main.js "></script>
 </body>
 
 </html>
